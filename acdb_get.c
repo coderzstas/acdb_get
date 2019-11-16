@@ -9,11 +9,15 @@
 typedef int (*platform_get_snd_device_acdb_id_t)(int);
 typedef int (*platform_get_snd_device_index_t)(char *);
 typedef char * (*platform_get_snd_device_name_t)(int);
+typedef char * (*platform_get_snd_backend_tag_t)(int);
+typedef char * (*platform_get_snd_interface_name_t)(int);
 
 int main() {
     platform_get_snd_device_acdb_id_t platform_get_snd_device_acdb_id = NULL;
     platform_get_snd_device_index_t platform_get_snd_device_index = NULL;
     platform_get_snd_device_name_t platform_get_snd_device_name = NULL;
+    platform_get_snd_backend_tag_t platform_get_snd_backend_tag = NULL;
+    platform_get_snd_interface_name_t platform_get_snd_interface_name = NULL;
     void *handle = NULL;
     int i;
 
@@ -54,6 +58,18 @@ int main() {
         return 1;
     }
 
+    platform_get_snd_backend_tag = (platform_get_snd_backend_tag_t) dlsym(handle, "platform_get_snd_backend_tag");
+    if (platform_get_snd_backend_tag == NULL)  {
+        fprintf(stderr, "%s\n", dlerror());
+        return 1;
+    }
+
+    platform_get_snd_interface_name = (platform_get_snd_interface_name_t) dlsym(handle, "platform_get_snd_interface_name");
+    if (platform_get_snd_interface_name == NULL)  {
+        fprintf(stderr, "%s\n", dlerror());
+        return 1;
+    }
+
     printf("static char * device_table[SND_DEVICE_MAX] = {\n");
     for (i = 1; i < SND_DEVICE_MAX; i++) {
         int dev = platform_get_snd_device_index(device_table[i]);
@@ -66,6 +82,21 @@ int main() {
         printf("\t[%s] = \"%s\",\n", device_table[i], platform_get_snd_device_name(dev));
     }
     printf("};\n");
+
+    printf("    <backend_names>\n");
+    for (i = 1; i < SND_DEVICE_MAX; i++) {
+        int dev = platform_get_snd_device_index(device_table[i]);
+        int acdb_id = platform_get_snd_device_acdb_id(dev);
+
+        if (acdb_id <= 0) {
+            continue;
+        }
+
+        printf("        <device name=\"%s\" backend=\"%s\" interface=\"%s\"/>\n",
+               device_table[i], platform_get_snd_backend_tag(dev),
+	       platform_get_snd_interface_name(dev));
+    }
+    printf("    </backend_names>\n");
 
     printf("    <acdb_ids>\n");
     for (i = 1; i < SND_DEVICE_MAX; i++) {
