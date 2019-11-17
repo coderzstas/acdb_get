@@ -54,6 +54,19 @@ int main() {
         return 1;
     }
 
+    printf("enum {\n    SND_DEVICE_NONE = 0,\n");
+    for (i = 1; i < SND_DEVICE_MAX; i++) {
+        int dev = platform_get_snd_device_index(device_table[i]);
+        int acdb_id = platform_get_snd_device_acdb_id(dev);
+
+        if (acdb_id <= 0) {
+            continue;
+        }
+
+        printf("%d    %s,\n", dev, device_table[i]);
+    }
+    printf("};\n");
+
     printf("static char * device_table[SND_DEVICE_MAX] = {\n");
     for (i = 1; i < SND_DEVICE_MAX; i++) {
         int dev = platform_get_snd_device_index(device_table[i]);
