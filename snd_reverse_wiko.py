@@ -1,0 +1,196 @@
+# Table of names
+snd_table = [
+	"SND_DEVICE_NONE",
+	"SND_DEVICE_OUT_HANDSET",
+	"SND_DEVICE_OUT_SPEAKER",
+	"SND_DEVICE_OUT_SPEAKER_EXTERNAL_1",
+	"SND_DEVICE_OUT_SPEAKER_EXTERNAL_2",
+	"SND_DEVICE_OUT_SPEAKER_REVERSE",
+	"SND_DEVICE_OUT_SPEAKER_WSA",
+	"SND_DEVICE_OUT_SPEAKER_VBAT",
+	"SND_DEVICE_OUT_LINE",
+	"SND_DEVICE_OUT_HEADPHONES",
+	"SND_DEVICE_OUT_HEADPHONES_44_1",
+	"SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES",
+	"SND_DEVICE_OUT_SPEAKER_AND_LINE",
+	"SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES_EXTERNAL_1",
+	"SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES_EXTERNAL_2",
+	"SND_DEVICE_OUT_VOICE_HANDSET",
+	"SND_DEVICE_OUT_VOICE_SPEAKER",
+	"SND_DEVICE_OUT_VOICE_SPEAKER_WSA",
+	"SND_DEVICE_OUT_VOICE_SPEAKER_VBAT",
+	"SND_DEVICE_OUT_VOICE_HEADPHONES",
+	"SND_DEVICE_OUT_VOICE_LINE",
+	"SND_DEVICE_OUT_HDMI",
+	"SND_DEVICE_OUT_SPEAKER_AND_HDMI",
+	"SND_DEVICE_OUT_BT_SCO",
+	"SND_DEVICE_OUT_BT_SCO_WB",
+	"SND_DEVICE_OUT_BT_A2DP",
+	"SND_DEVICE_OUT_SPEAKER_AND_BT_A2DP",
+	"SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES",
+	"SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES",
+	"SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET",
+	"SND_DEVICE_OUT_VOICE_TX",
+	"SND_DEVICE_OUT_AFE_PROXY",
+	"SND_DEVICE_OUT_USB_HEADSET",
+	"SND_DEVICE_OUT_SPEAKER_AND_USB_HEADSET",
+	"SND_DEVICE_OUT_TRANSMISSION_FM",
+	"SND_DEVICE_OUT_ANC_HEADSET",
+	"SND_DEVICE_OUT_ANC_FB_HEADSET",
+	"SND_DEVICE_OUT_VOICE_ANC_HEADSET",
+	"SND_DEVICE_OUT_VOICE_ANC_FB_HEADSET",
+	"SND_DEVICE_OUT_SPEAKER_AND_ANC_HEADSET",
+	"SND_DEVICE_OUT_ANC_HANDSET",
+	"SND_DEVICE_OUT_SPEAKER_PROTECTED",
+	"SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED",
+	"SND_DEVICE_OUT_SPEAKER_PROTECTED_VBAT",
+	"SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED_VBAT",
+	"SND_DEVICE_IN_HANDSET_MIC",
+	"SND_DEVICE_IN_HANDSET_MIC_EXTERNAL",
+	"SND_DEVICE_IN_SKYPE_HEADSET_MIC",
+	"SND_DEVICE_IN_HANDSET_MIC_AEC",
+	"SND_DEVICE_IN_HANDSET_MIC_NS",
+	"SND_DEVICE_IN_HANDSET_MIC_AEC_NS",
+	"SND_DEVICE_IN_HANDSET_DMIC",
+	"SND_DEVICE_IN_HANDSET_DMIC_AEC",
+	"SND_DEVICE_IN_HANDSET_DMIC_NS",
+	"SND_DEVICE_IN_HANDSET_DMIC_AEC_NS",
+	"SND_DEVICE_IN_SPEAKER_MIC",
+	"SND_DEVICE_IN_SPEAKER_MIC_AEC",
+	"SND_DEVICE_IN_SPEAKER_MIC_NS",
+	"SND_DEVICE_IN_SPEAKER_MIC_AEC_NS",
+	"SND_DEVICE_IN_SPEAKER_DMIC",
+	"SND_DEVICE_IN_SPEAKER_DMIC_AEC",
+	"SND_DEVICE_IN_SPEAKER_DMIC_NS",
+	"SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS",
+	"SND_DEVICE_IN_HEADSET_MIC",
+	"SND_DEVICE_IN_HEADSET_MIC_FLUENCE",
+	"SND_DEVICE_IN_VOICE_SPEAKER_MIC",
+	"SND_DEVICE_IN_VOICE_HEADSET_MIC",
+	"SND_DEVICE_IN_HDMI_MIC",
+	"SND_DEVICE_IN_BT_SCO_MIC",
+	"SND_DEVICE_IN_BT_SCO_MIC_NREC",
+	"SND_DEVICE_IN_BT_SCO_MIC_WB",
+	"SND_DEVICE_IN_BT_SCO_MIC_WB_NREC",
+	"SND_DEVICE_IN_CAMCORDER_MIC",
+	"SND_DEVICE_IN_VOICE_HANDSET_REC",
+	"SND_DEVICE_IN_VOICE_DMIC",
+	"SND_DEVICE_IN_SKYPE_DMIC",
+	"SND_DEVICE_IN_VOICE_SPEAKER_DMIC",
+	"SND_DEVICE_IN_VOICE_SPEAKER_QMIC",
+	"SND_DEVICE_IN_VOICE_TTY_FULL_HEADSET_MIC",
+	"SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC",
+	"SND_DEVICE_IN_VOICE_TTY_HCO_HEADSET_MIC",
+	"SND_DEVICE_IN_VOICE_REC_MIC",
+	"SND_DEVICE_IN_VOICE_REC_MIC_NS",
+	"SND_DEVICE_IN_VOICE_REC_DMIC_STEREO",
+	"SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE",
+	"SND_DEVICE_IN_VOICE_RX",
+	"SND_DEVICE_IN_USB_HEADSET_MIC",
+	"SND_DEVICE_IN_CAPTURE_FM",
+	"SND_DEVICE_IN_AANC_HANDSET_MIC",
+	"SND_DEVICE_IN_QUAD_MIC",
+	"SND_DEVICE_IN_HANDSET_STEREO_DMIC",
+	"SND_DEVICE_IN_SPEAKER_STEREO_DMIC",
+	"SND_DEVICE_IN_CAPTURE_VI_FEEDBACK",
+	"SND_DEVICE_IN_VOICE_SPEAKER_DMIC_BROADSIDE",
+	"SND_DEVICE_IN_SPEAKER_DMIC_BROADSIDE",
+	"SND_DEVICE_IN_SPEAKER_DMIC_AEC_BROADSIDE",
+	"SND_DEVICE_IN_SPEAKER_DMIC_NS_BROADSIDE",
+	"SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS_BROADSIDE",
+	"SND_DEVICE_IN_VOICE_FLUENCE_DMIC_AANC",
+	"SND_DEVICE_IN_HANDSET_QMIC",
+	"SND_DEVICE_IN_SPEAKER_QMIC_AEC",
+	"SND_DEVICE_IN_SPEAKER_QMIC_NS",
+	"SND_DEVICE_IN_SPEAKER_QMIC_AEC_NS",
+	"SND_DEVICE_IN_THREE_MIC",
+	"SND_DEVICE_IN_HANDSET_TMIC",
+	"SND_DEVICE_IN_UNPROCESSED_MIC",
+	"SND_DEVICE_IN_UNPROCESSED_STEREO_MIC",
+	"SND_DEVICE_IN_UNPROCESSED_THREE_MIC",
+	"SND_DEVICE_IN_UNPROCESSED_QUAD_MIC",
+	"SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC"
+]
+# Reversed tab
+reverse_tab = [
+	0x44048, #(int)strdup("bt-sco"
+	0x44050, #(int)strdup("bt-sco-wb"
+	0x4404C, #(int)strdup("bt-sco"
+	0x44054, #(int)strdup("bt-sco-wb"
+	0x43F94, #(int)strdup("bt-sco"
+	0x43F98, #(int)strdup("bt-sco-wb"
+	0x43F8C, #(int)strdup("hdmi"
+	0x43F90, #(int)strdup("speaker-and-hdmi"
+	0x43FB0, #(int)strdup("afe-proxy"
+	0x4408C, #(int)strdup("afe-proxy"
+	0x43FB4, #(int)strdup("afe-proxy"
+	0x43FB8, #(int)strdup("usb-headphones"
+	0x43FBC, #(int)strdup("speaker-and-usb-headphones"
+	0x44090, #(int)strdup("usb-headset-mic"
+	0x44094, #(int)strdup("capture-fm"
+	0x43FC0, #(int)strdup("transmission-fm"
+	0x43F60, #(int)strdup("headphones-44.1"
+	0x43F80, #(int)strdup("vbat-voice-speaker"
+	0x43F9C, #(int)strdup("bt-a2dp"
+	0x43FA0, #(int)strdup("speaker-and-bt-a2dp"
+]
+# Source
+source_entries = [
+	"SND_DEVICE_IN_BT_SCO_MIC", # = strdup("bt-sco"
+	"SND_DEVICE_IN_BT_SCO_MIC_WB", # = strdup("bt-sco-wb"
+	"SND_DEVICE_IN_BT_SCO_MIC_NREC", # = strdup("bt-sco"
+	"SND_DEVICE_IN_BT_SCO_MIC_WB_NREC", # = strdup("bt-sco-wb"
+	"SND_DEVICE_OUT_BT_SCO", # = strdup("bt-sco"
+	"SND_DEVICE_OUT_BT_SCO_WB", # = strdup("bt-sco-wb"
+	"SND_DEVICE_OUT_HDMI", # = strdup("hdmi"
+	"SND_DEVICE_OUT_SPEAKER_AND_HDMI", # = strdup("speaker-and-hdmi"
+	"SND_DEVICE_OUT_VOICE_TX", # = strdup("afe-proxy"
+	"SND_DEVICE_IN_VOICE_RX", # = strdup("afe-proxy"
+	"SND_DEVICE_OUT_AFE_PROXY", # = strdup("afe-proxy"
+	"SND_DEVICE_OUT_USB_HEADSET", # = strdup("usb-headphones"
+	"SND_DEVICE_OUT_SPEAKER_AND_USB_HEADSET", # =
+	"SND_DEVICE_IN_USB_HEADSET_MIC", # = strdup("usb-headset-mic"
+	"SND_DEVICE_IN_CAPTURE_FM", # = strdup("capture-fm"
+	"SND_DEVICE_OUT_TRANSMISSION_FM", # = strdup("transmission-fm"
+	"SND_DEVICE_OUT_HEADPHONES_44_1", # = strdup("headphones-44.1"
+	"SND_DEVICE_OUT_VOICE_SPEAKER_VBAT", # = strdup("vbat-voice-speaker"
+	"SND_DEVICE_OUT_BT_A2DP", # = strdup("bt-a2dp"
+	"SND_DEVICE_OUT_SPEAKER_AND_BT_A2DP", # = strdup("speaker-and-bt-a2dp"
+]
+# Names
+names = [
+	"bt-sco",
+	"bt-sco-wb",
+	"bt-sco",
+	"bt-sco-wb",
+	"bt-sco",
+	"bt-sco-wb",
+	"hdmi",
+	"speaker-and-hdmi",
+	"afe-proxy",
+	"afe-proxy",
+	"afe-proxy",
+	"usb-headphones",
+	"speaker-and-usb-headphones",
+	"usb-headset-mic",
+	"capture-fm",
+	"transmission-fm",
+	"headphones-44.1",
+	"vbat-voice-speaker",
+	"bt-a2dp",
+	"speaker-and-bt-a2dp"
+]
+
+# Get the SND index
+def get_snd_index(name):
+	return snd_table.index(name)
+
+# Get num from reverse
+def get_num(rev):
+	orig = 278332
+	return (((rev-orig) / 4)-1)
+
+# Compare both source and reverse
+n = len(reverse_tab)
+for i in range(n):
+	print source_entries[i] + " | " + str(get_snd_index(source_entries[i])) + " | "  + str(reverse_tab[i]) + " | " + str(get_num(reverse_tab[i])) + " | " + str(get_num(reverse_tab[i]) == get_snd_index(source_entries[i]))
